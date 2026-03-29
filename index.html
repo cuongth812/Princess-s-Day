@@ -639,7 +639,7 @@
         // 👉 dùng trực tiếp
         window.APP_CONFIG_PROMISE = Promise.resolve(CONFIG);
         </script>
-    // Chuẩn hóa luồng lấy config:
+    <!--// Chuẩn hóa luồng lấy config:
     // - preview=1  -> lấy từ IndexedDB (preview db), không có thì localStorage
     // - ?<websiteId> -> gọi API womenday
     // - không gì cả -> dùng DEFAULT_APP_CONFIG
@@ -647,7 +647,7 @@
         const params = new URLSearchParams(location.search);
         const preview = params.get('preview');
 
-        // Preview: ưu tiên IndexedDB (chịu được nhiều ảnh), fallback localStorage
+        // Preview: ưu tiên IndexedDB (chịu được nhiều ảnh), fallback localStorage-->
         <!--if (preview === '1') {
             window.APP_CONFIG_PROMISE = (function() {
                 const PREVIEW_DB_NAME = 'WomensDayPreviewDB', PREVIEW_STORE = 'preview', PREVIEW_KEY = 'config';
@@ -679,7 +679,7 @@
             return;
     } -->
 
-        // Website thật: query dạng ?<websiteId> (chỉ lấy segment đầu, bỏ phần Zalo/UTM phía sau)
+        <!--// Website thật: query dạng ?<websiteId> (chỉ lấy segment đầu, bỏ phần Zalo/UTM phía sau)-->
         <!--- var rawSearch = window.location.search || '';
         var websiteId = '';
         if (rawSearch && rawSearch !== '?preview=1') {
@@ -733,7 +733,7 @@
             return;
         } -->
 
-        // Trường hợp không có websiteId: dùng config mặc định
+        <!--// Trường hợp không có websiteId: dùng config mặc định
         if (!window.APP_CONFIG) {
             window.APP_CONFIG = window.DEFAULT_APP_CONFIG;
         }
@@ -741,7 +741,7 @@
             window.APP_CONFIG_PROMISE = Promise.resolve(window.APP_CONFIG);
         }
     })();
-    </script>
+    </script>-->
 
     <script type="importmap">
       {
